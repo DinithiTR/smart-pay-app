@@ -74,7 +74,7 @@ export default function Layout() {
               fontWeight: 'bold'
             }}
           >
-            A
+            S
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', rowGap: 2, minWidth: 0 }}>
             <AdaptiveText variant="h2" weight="bold" style={{ letterSpacing: '-0.02em' }}>

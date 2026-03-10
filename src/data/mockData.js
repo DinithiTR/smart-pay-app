@@ -1,7 +1,7 @@
 import { Send, CreditCard, Receipt, Phone, Zap, Wifi } from 'lucide-react';
 
 export const userAccount = {
-  name: "Dinithi R.",
+  name: "Ranasinghe R.A.",
   accountNumber: "8840 2311 0094 5440",
   balance: 14250.75,
   availableCredit: 5000.00
