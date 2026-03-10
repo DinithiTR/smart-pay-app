@@ -23,6 +23,7 @@ function AuraShell({ children }) {
         color: colors.text,
         minHeight: "100vh",
         width: "100%",
+        minWidth: 0,
         display: "flex",
       }}
     >

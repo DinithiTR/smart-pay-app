@@ -98,9 +98,10 @@ export default function TransactionHistory() {
         display: 'flex',
         flexDirection: 'column',
         rowGap: spacing.gapY * 3,
+        minWidth: 0,
       }}
     >
-      <div>
+      <div style={{ minWidth: 0 }}>
         <AdaptiveText variant="h2" weight="bold">
           Transaction History
         </AdaptiveText>
@@ -114,6 +115,7 @@ export default function TransactionHistory() {
         style={{
           backgroundColor: colors.surface,
           border: `1px solid ${colors.border}`,
+          minWidth: 0,
         }}
       >
         <AdaptiveCard.Body
@@ -121,9 +123,10 @@ export default function TransactionHistory() {
             display: 'flex',
             flexDirection: 'column',
             rowGap: spacing.gapY * 2,
+            minWidth: 0,
           }}
         >
-          <div style={{ maxWidth: 420 }}>
+          <div style={{ width: 'min(100%, 420px)', minWidth: 0 }}>
             <AdaptiveInput
               placeholder="Search by vendor, category, status, or date..."
               value={searchTerm}
@@ -132,7 +135,7 @@ export default function TransactionHistory() {
             />
           </div>
 
-          <div className="fintech-table" style={{ overflowX: 'auto' }}>
+          <div className="fintech-table" style={{ overflowX: 'auto', width: '100%', minWidth: 0 }}>
             <AdaptiveTable
               variant="sortablePaginated"
               columns={columns}
