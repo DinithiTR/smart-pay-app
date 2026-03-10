@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+  --radius-xl: 16px;
+  --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 
+  Fintech Monospace Typography
+  Used exclusively for balances, transaction amounts, and account numbers to format data securely.
+*/
+.font-mono {
+  font-family: 'Space Mono', monospace !important;
+  letter-spacing: -0.02em;
+}
+
+/* 
+  Smart Pay specific layout/card enhancements 
+  No hex colors are defined here for background/text. We strictly let AURA tokens handle themes.
+*/
+.fintech-card {
+  border-radius: var(--radius-xl) !important;
+  transition: var(--transition) !important;
+}
+
+.fintech-sidebar {
+  border-right: 1px solid rgba(0,0,0,0.05); /* very soft fallback, Aura borders usually take over */
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.fade-in {
+  animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 
+  Data table subtle tweaks 
+  Only modifies metrics that AURA ignores, leaving token colors strictly alone.
+*/
+.fintech-table th {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  font-weight: 800 !important;
+}
+
+.fintech-table td {
+  vertical-align: middle;
+}
