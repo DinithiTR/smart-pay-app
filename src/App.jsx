@@ -1,6 +1,6 @@
 import React, { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { AdaptiveProvider, useAdaptive } from '@aura-adaptive/aura-ui-adaptor';
+import { AdaptiveProvider, useAdaptive, AdaptiveProfileInspector } from '@aura-adaptive/aura-ui-adaptor';
 
 import Layout from './components/Layout';
 const Dashboard = lazy(() => import('./pages/Dashboard'));
@@ -53,7 +53,8 @@ function AppInner() {
 function App() {
   return (
     <Router>
-      <AdaptiveProvider simulateExtensionInstalled={false}>
+      <AdaptiveProvider>
+      <AdaptiveProfileInspector />
         <AppInner />
       </AdaptiveProvider>
     </Router>
